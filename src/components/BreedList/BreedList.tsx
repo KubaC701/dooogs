@@ -1,6 +1,7 @@
-import useBreeds from "../../hooks/useBreeds";
+import useBreeds from '../../hooks/useBreeds';
+import BreedListItem from './Item/Item';
 
-const BreedsList = (): JSX.Element => {
+const BreedList = () => {
   const { breeds, isLoading, error } = useBreeds();
 
   if (isLoading) {
@@ -14,10 +15,13 @@ const BreedsList = (): JSX.Element => {
   return (
     <ul>
       {breeds?.map((breed: string) => (
-        <li key={breed}>{breed}</li>
+        <BreedListItem
+          key={breed}
+          breed={breed}
+        />
       ))}
     </ul>
   );
 };
 
-export default BreedsList;
+export default BreedList;

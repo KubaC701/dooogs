@@ -1,9 +1,9 @@
-import BreedsList from './components/BreedsList/BreedsList';
+import BreedList from './components/BreedList/BreedList';
 
 const App = () => {
   return (
     <div className="App">
-      <BreedsList />
+      <BreedList />
     </div>
   );
 };
