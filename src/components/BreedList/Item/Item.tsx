@@ -1,5 +1,8 @@
 import { useState } from 'react';
+
 import BreedModal from '../../BreedModal/BreedModal';
+
+import styles from './Item.module.scss';
 
 interface Props {
   breed: string;
@@ -18,8 +21,10 @@ const BreedListItem: React.FC<Props> = ({ breed }) => {
 
   return (
     <>
-      <li>
-        <button onClick={handleClick}>{breed}</button>
+      <li className={styles.item}>
+        <button onClick={handleClick} className={styles.button}>
+          {breed}
+        </button>
       </li>
       <BreedModal breed={breed} isOpen={isModalOpen} onClose={handleClose} />
     </>

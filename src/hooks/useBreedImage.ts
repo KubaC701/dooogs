@@ -1,15 +1,17 @@
-import { useCallback, useEffect } from 'react';
-import { fetchBreedImage } from '../services/dogs';
+import { useCallback } from 'react';
+
 import useFetch from './useFetch';
+import { fetchBreedImage } from '../services/dogs';
 
 const useBreedImage = (breed: string) => {
-  const memoizedFetchBreedImage = useCallback(() => fetchBreedImage(breed), [breed]);
+  const memoizedFetchBreedImage = useCallback(
+    () => fetchBreedImage(breed),
+    [breed],
+  );
 
-  const { data, error, fetchData, isLoading } = useFetch(memoizedFetchBreedImage);
-
-  useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+  const { data, error, fetchData, isLoading } = useFetch(
+    memoizedFetchBreedImage,
+  );
 
   return { breedImage: data?.message, isLoading, error, refetch: fetchData };
 };

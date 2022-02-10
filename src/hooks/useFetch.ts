@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from 'react';
 
 const useFetch = <DataType>(fetchCallback: () => Promise<DataType>) => {
   const [data, setData] = useState<DataType>();
@@ -24,6 +24,10 @@ const useFetch = <DataType>(fetchCallback: () => Promise<DataType>) => {
       setIsLoading(false);
     }
   }, [fetchCallback]);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   return { data, isLoading, error, fetchData };
 };

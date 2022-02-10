@@ -1,0 +1,51 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.modal {
+  max-width: 500px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 2rem);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 3rem 1rem 1rem;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.25);
+  height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+
+  @include reset-button;
+}
+
+.image {
+  width: 100%;
+  flex: 1;
+  overflow-y: hidden;
+  object-fit: contain;
+}
+
+.errorIcon {
+  width: 2rem;
+}
+
+.errorWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $error-color;
+}
