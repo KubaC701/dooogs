@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'react';
 
-import useFetch from './useFetch';
 import { fetchBreeds } from '../services/dogs';
+import useFetch from './useFetch';
 
 const useBreeds = () => {
   const { data, error, fetchData, isLoading } = useFetch(fetchBreeds);

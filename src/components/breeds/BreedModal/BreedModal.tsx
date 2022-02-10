@@ -39,7 +39,12 @@ const BreedModal: React.FC<Props> = ({ isOpen, onClose, breed }) => {
         <BaseError message={error} />
       ) : (
         breedImage && (
-          <img className={styles.image} src={breedImage} alt={breed} />
+          <img
+            className={styles.image}
+            src={breedImage}
+            alt={breed}
+            key={breedImage}
+          />
         )
       )}
       <BaseButton onClick={refetch}>Show me another cute photo!</BaseButton>

@@ -38,10 +38,21 @@
   flex: 1;
   overflow-y: hidden;
   object-fit: contain;
+  animation: fade 1s ease-out;
 }
 
 .skeleton {
   width: 100%;
   aspect-ratio: 1;
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }

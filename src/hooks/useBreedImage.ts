@@ -1,7 +1,7 @@
 import { useCallback, useEffect } from 'react';
 
-import useFetch from './useFetch';
 import { fetchBreedImage } from '../services/dogs';
+import useFetch from './useFetch';
 
 interface Options {
   skip?: boolean;

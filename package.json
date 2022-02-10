@@ -34,6 +34,12 @@
       "arrow-body-style": [
         "error",
         "as-needed"
+      ],
+      "sort-imports": [
+        "error",
+        {
+          "allowSeparatedGroups": true
+        }
       ]
     }
   },

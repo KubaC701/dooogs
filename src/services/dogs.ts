@@ -1,4 +1,5 @@
 import { fetchData } from '.';
+
 import { BreedImageResponse, BreedsResponse } from '../types';
 
 const API_URL = 'https://dog.ceo/api';

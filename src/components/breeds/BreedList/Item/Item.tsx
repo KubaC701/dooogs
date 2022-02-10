@@ -1,22 +1,13 @@
-import { useState } from 'react';
-
-import BreedModal from '../../BreedModal/BreedModal';
-
 import styles from './Item.module.scss';
 
 interface Props {
   breed: string;
+  onClick: (value: string) => void;
 }
 
-const BreedListItem: React.FC<Props> = ({ breed }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
+const BreedListItem: React.FC<Props> = ({ breed, onClick }) => {
   const handleClick = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleClose = () => {
-    setIsModalOpen(false);
+    onClick(breed);
   };
 
   return (
@@ -26,7 +17,7 @@ const BreedListItem: React.FC<Props> = ({ breed }) => {
           {breed}
         </button>
       </li>
-      <BreedModal breed={breed} isOpen={isModalOpen} onClose={handleClose} />
+      {}
     </>
   );
 };
