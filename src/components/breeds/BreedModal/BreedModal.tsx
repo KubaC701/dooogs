@@ -22,12 +22,19 @@ const BreedModal: React.FC<Props> = ({ isOpen, onClose, breed }) => {
 
   return (
     <Modal
-      isOpen={isOpen}
-      className={styles.modal}
-      onRequestClose={onClose}
       aria={{
         labelledby: 'heading',
       }}
+      isOpen={isOpen}
+      className={styles.modal}
+      overlayClassName={{
+        base: styles.overlay,
+        afterOpen: styles.overlayAfterOpen,
+        beforeClose: styles.overlayBeforeClose,
+      }}
+      onRequestClose={onClose}
+      closeTimeoutMS={500}
+      shouldReturnFocusAfterClose={false}
     >
       <button onClick={onClose} className={styles.closeButton}>
         <img src="/icons/close.svg" alt="Close" />

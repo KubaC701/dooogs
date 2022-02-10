@@ -11,16 +11,18 @@ import styles from './BreedList.module.scss';
 const BreedList: React.FC = () => {
   const { breeds, error } = useBreeds();
   const [activeBreed, setActiveBreed] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   if (error) {
     return <BaseError message={error} />;
   }
 
   const handleCloseModal = () => {
-    setActiveBreed('');
+    setIsModalOpen(false)
   };
 
   const handleClickItem = (value: string) => {
+    setIsModalOpen(true)
     setActiveBreed(value);
   };
 
@@ -34,7 +36,7 @@ const BreedList: React.FC = () => {
       {/* to render only one portal at once the modal is here, not in every single item */}
       <BreedModal
         breed={activeBreed}
-        isOpen={!!activeBreed}
+        isOpen={isModalOpen}
         onClose={handleCloseModal}
       />
     </>
