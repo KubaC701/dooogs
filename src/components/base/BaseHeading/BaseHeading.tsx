@@ -4,12 +4,10 @@ const BaseHeading: React.FC<React.HTMLAttributes<HTMLHeadingElement>> = ({
   children,
   className,
   ...props
-}) => {
-  return (
-    <h1 {...props} className={`${styles.heading} ${className}`}>
-      {children}
-    </h1>
-  );
-};
+}) => (
+  <h1 {...props} className={`${styles.heading} ${className}`}>
+    {children}
+  </h1>
+);
 
 export default BaseHeading;

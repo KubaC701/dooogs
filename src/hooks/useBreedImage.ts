@@ -1,9 +1,13 @@
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 
 import useFetch from './useFetch';
 import { fetchBreedImage } from '../services/dogs';
 
-const useBreedImage = (breed: string) => {
+interface Options {
+  skip?: boolean;
+}
+
+const useBreedImage = (breed: string, options?: Options) => {
   const memoizedFetchBreedImage = useCallback(
     () => fetchBreedImage(breed),
     [breed],
@@ -12,6 +16,14 @@ const useBreedImage = (breed: string) => {
   const { data, error, fetchData, isLoading } = useFetch(
     memoizedFetchBreedImage,
   );
+
+  useEffect(() => {
+    if (options?.skip) {
+      return;
+    }
+
+    fetchData();
+  }, [fetchData, options?.skip]);
 
   return { breedImage: data?.message, isLoading, error, refetch: fetchData };
 };

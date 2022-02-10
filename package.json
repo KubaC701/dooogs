@@ -28,7 +28,14 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "react/jsx-key": "error",
+      "arrow-body-style": [
+        "error",
+        "as-needed"
+      ]
+    }
   },
   "browserslist": {
     "production": [

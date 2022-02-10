@@ -1,13 +1,5 @@
-import BaseHeading from './components/base/BaseHeading/BaseHeading';
-import BreedList from './components/BreedList/BreedList';
+import Home from './pages/Home/Home';
 
-const App = () => {
-  return (
-    <div className="container">
-      <BaseHeading>Dooogs</BaseHeading>
-      <BreedList />
-    </div>
-  );
-};
+const App = () => <Home />;
 
 export default App;

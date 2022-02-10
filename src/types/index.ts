@@ -3,5 +3,5 @@ export interface ApiResponse<MessageType> {
   status: string;
 }
 
-export type BreedsResponse = ApiResponse<Record<string, string[]>>
-export type BreedImageResponse = ApiResponse<string>
+export type BreedsResponse = ApiResponse<Record<string, string[]>>;
+export type BreedImageResponse = ApiResponse<string>;

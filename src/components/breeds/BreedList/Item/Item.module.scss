@@ -1,4 +1,4 @@
-@import '../../../styles/mixins.scss';
+@import '../../../../styles/mixins.scss';
 
 .button {
   width: 100%;
@@ -6,6 +6,9 @@
   padding: 1.5rem 1rem;
   @include reset-button;
   border-bottom: 1px solid #000;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 1rem;
 
   &:focus,
   &:hover {
