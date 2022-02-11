@@ -1,7 +1,6 @@
 @import '../../../../styles/mixins';
 
-.button,
-.subButton {
+.button {
   @include reset-button;
 
   width: 100%;
@@ -21,16 +20,17 @@
   }
 }
 
-.subList {
-  list-style: none;
-}
-
 .subButton {
   padding-left: 2rem;
 }
 
+.subList {
+  list-style: none;
+}
+
 .arrow {
   transition: transform 0.4s;
+
   &Collapsed {
     transform: rotate(180deg);
   }

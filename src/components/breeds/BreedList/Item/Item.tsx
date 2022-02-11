@@ -55,7 +55,7 @@ const BreedListItem: React.FC<Props> = ({ breed, onClick, subBreeds }) => {
               <li key={subBreed}>
                 <button
                   onClick={handleSubBreedClick(subBreed)}
-                  className={styles.subButton}
+                  className={`${styles.button} ${styles.subButton}`}
                 >
                   {subBreed}
                 </button>

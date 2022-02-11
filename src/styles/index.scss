@@ -16,6 +16,7 @@ html {
   box-sizing: inherit;
 }
 
+/* stylelint-disable */
 .ReactCollapse--collapse {
-  transition: height 500ms;
+  transition: height 0.5s;
 }

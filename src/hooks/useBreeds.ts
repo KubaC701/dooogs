@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 
 import { fetchBreeds } from '../services/dogs';
 import useFetch from './useFetch';
@@ -10,7 +10,12 @@ const useBreeds = () => {
     fetchData();
   }, [fetchData]);
 
-  return { breeds: data?.message, isLoading, error, refetch: fetchData };
+  const breeds = useMemo(
+    () => data?.message && Object.entries(data.message),
+    [data?.message],
+  );
+
+  return { breeds: breeds, isLoading, error, refetch: fetchData };
 };
 
 export default useBreeds;

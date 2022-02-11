@@ -30,8 +30,7 @@ const BreedList: React.FC = () => {
   return (
     <>
       <ul className={styles.list}>
-        {breeds &&
-          Object.entries(breeds)?.map(([breed, subBreeds]) => (
+        {breeds?.map(([breed, subBreeds]) => (
             <BreedListItem
               key={breed}
               breed={breed}
