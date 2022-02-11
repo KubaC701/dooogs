@@ -1,13 +1,23 @@
 {
   "files": {
     "main.css": "/dooogs/static/css/main.1d792d70.css",
-    "main.js": "/dooogs/static/js/main.24c969c7.js",
+    "main.js": "/dooogs/static/js/main.df8b1476.js",
+    "static/media/background-left-3.png": "/dooogs/static/media/background-left-3.5003dbaa7d3b66e1a6ed.png",
+    "static/media/background-right-2.png": "/dooogs/static/media/background-right-2.1b81894eee269260a871.png",
+    "static/media/background-right-3.png": "/dooogs/static/media/background-right-3.af1f9fb3f90c58d06b60.png",
+    "static/media/background-left-2.png": "/dooogs/static/media/background-left-2.f4914bb1f7c02a942a6f.png",
+    "static/media/background-right.png": "/dooogs/static/media/background-right.ab35d286241eb7836aca.png",
+    "static/media/background-left.png": "/dooogs/static/media/background-left.fb9773bfd5d4c6258a29.png",
+    "static/media/logo192.png": "/dooogs/static/media/logo192.b6f1ef6789fd6dae9136.png",
     "index.html": "/dooogs/index.html",
+    "static/media/error.svg": "/dooogs/static/media/error.56267d4507695992a46ad4d59a68d289.svg",
+    "static/media/close.svg": "/dooogs/static/media/close.4420b3dbf1589fb0c0218721402255cf.svg",
+    "static/media/arrow.svg": "/dooogs/static/media/arrow.5b8c5f9154d2bb467846764b415aa332.svg",
     "main.1d792d70.css.map": "/dooogs/static/css/main.1d792d70.css.map",
-    "main.24c969c7.js.map": "/dooogs/static/js/main.24c969c7.js.map"
+    "main.df8b1476.js.map": "/dooogs/static/js/main.df8b1476.js.map"
   },
   "entrypoints": [
     "static/css/main.1d792d70.css",
-    "static/js/main.24c969c7.js"
+    "static/js/main.df8b1476.js"
   ]
 }
