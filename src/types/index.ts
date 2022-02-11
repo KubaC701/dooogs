@@ -6,7 +6,9 @@ export interface ApiResponse<MessageType> {
 export type BreedsResponse = ApiResponse<Record<string, string[]>>;
 export type BreedImageResponse = ApiResponse<string>;
 
-export interface Breed {
+interface BreedWithSubBreed {
   name: string;
   subBreed?: string;
 }
+
+export type Breed = string | BreedWithSubBreed;

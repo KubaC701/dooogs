@@ -17,13 +17,15 @@ interface Props {
 Modal.setAppElement('#modal-root');
 
 const BreedModal: React.FC<Props> = ({ isOpen, onClose, breed }) => {
-  const url = breed.subBreed ? `${breed.name}/${breed.subBreed}` : breed.name;
+  const isGenericBreed = typeof breed === 'string';
+
+  const url = isGenericBreed ? breed : `${breed.name}/${breed.subBreed}`;
 
   const { breedImage, error, refetch } = useBreedImage(url, {
     skip: !isOpen,
   });
 
-  const title = breed.subBreed ? `${breed.name} ${breed.subBreed}` : breed.name;
+  const title = isGenericBreed ? breed : `${breed.name} ${breed.subBreed}`;
 
   return (
     <Modal

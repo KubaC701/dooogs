@@ -22,7 +22,7 @@ const BreedListItem: React.FC<Props> = ({ breed, onClick, subBreeds }) => {
       return;
     }
 
-    onClick({name: breed});
+    onClick(breed);
   };
 
   const handleSubBreedClick = (subBreed: string) => () => {
