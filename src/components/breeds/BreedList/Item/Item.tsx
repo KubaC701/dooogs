@@ -5,6 +5,8 @@ import { Breed } from '../../../../types';
 
 import styles from './Item.module.scss';
 
+import arrowIcon from '../../../../assets/icons/arrow.svg'
+
 interface Props {
   breed: string;
   onClick: (value: Breed) => void;
@@ -40,7 +42,7 @@ const BreedListItem: React.FC<Props> = ({ breed, onClick, subBreeds }) => {
           {breed}
           {hasSubBreeds && (
             <img
-              src="/icons/arrow.svg"
+              src={arrowIcon}
               alt=""
               className={`${styles.arrow} ${isOpened && styles.arrowCollapsed}`}
             />

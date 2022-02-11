@@ -4,25 +4,33 @@ import BreedList from '../../components/breeds/BreedList/BreedList';
 
 import styles from './Home.module.scss';
 
+import backgroundLeft from '../../assets/images/background-left.png';
+import backgroundLeft2 from '../../assets/images/background-left-2.png';
+import backgroundLeft3 from '../../assets/images/background-left-3.png';
+
+import backgroundRight from '../../assets/images/background-right.png';
+import backgroundRight2 from '../../assets/images/background-right-2.png';
+import backgroundRight3 from '../../assets/images/background-right-3.png';
+
 const Home: React.FC = () => {
   const leftImages = [
-    'background-left.png',
-    'background-left-2.png',
-    'background-left-3.png',
-    'background-left.png',
-    'background-left-2.png',
-    'background-left-3.png',
-    'background-left-2.png',
+    backgroundLeft,
+    backgroundLeft2,
+    backgroundLeft3,
+    backgroundLeft,
+    backgroundLeft2,
+    backgroundLeft3,
+    backgroundLeft2,
   ];
 
   const rightImages = [
-    'background-right.png',
-    'background-right-2.png',
-    'background-right-3.png',
-    'background-right.png',
-    'background-right-2.png',
-    'background-right-3.png',
-    'background-right-2.png',
+    backgroundRight,
+    backgroundRight2,
+    backgroundRight3,
+    backgroundRight,
+    backgroundRight2,
+    backgroundRight3,
+    backgroundRight2,
   ];
 
   return (

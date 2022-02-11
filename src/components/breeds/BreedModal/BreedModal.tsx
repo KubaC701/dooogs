@@ -8,6 +8,8 @@ import { Breed } from '../../../types';
 
 import styles from './BreedModal.module.scss';
 
+import closeIcon from '../../../assets/icons/close.svg'
+
 interface Props {
   isOpen: boolean;
   onClose: () => void;
@@ -43,7 +45,7 @@ const BreedModal: React.FC<Props> = ({ isOpen, onClose, breed }) => {
       shouldReturnFocusAfterClose={false}
     >
       <button onClick={onClose} className={styles.closeButton}>
-        <img src="/icons/close.svg" alt="Close" />
+        <img src={closeIcon} alt="Close" />
       </button>
       <h1 id="heading" className={styles.heading}>
         {title}

@@ -11,7 +11,7 @@ const AppAside: React.FC<Props> = ({ images, label }) => (
       {images.map((image, index) => (
         <img
           key={index}
-          src={`/images/${image}`}
+          src={image}
           alt="Cute dogs collage"
           className={styles.image}
           // load first image immediately
