@@ -33,3 +33,7 @@ Runs Prettier to auto format files in `src` folder.
 ### `npm run lint`
 
 Runs ESlint and Stylelint with auto fix flag.
+
+### `npm run deploy`
+
+Deploys the app to Github Pages.
