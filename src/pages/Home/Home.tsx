@@ -6,33 +6,33 @@ import styles from './Home.module.scss';
 
 const Home: React.FC = () => {
   const leftImages = [
-    '/background-left.png',
-    '/background-left-2.png',
-    '/background-left-3.png',
-    '/background-left.png',
-    '/background-left-2.png',
-    '/background-left-3.png',
-    '/background-left-2.png',
+    'background-left.png',
+    'background-left-2.png',
+    'background-left-3.png',
+    'background-left.png',
+    'background-left-2.png',
+    'background-left-3.png',
+    'background-left-2.png',
   ];
 
   const rightImages = [
-    '/background-right.png',
-    '/background-right-2.png',
-    '/background-right-3.png',
-    '/background-right.png',
-    '/background-right-2.png',
-    '/background-right-3.png',
-    '/background-right-2.png',
+    'background-right.png',
+    'background-right-2.png',
+    'background-right-3.png',
+    'background-right.png',
+    'background-right-2.png',
+    'background-right-3.png',
+    'background-right-2.png',
   ];
 
   return (
     <div className={styles.container}>
-      <AppAside images={leftImages} />
+      <AppAside images={leftImages} label="Left aside" />
       <main className={styles.content}>
         <AppHeader />
         <BreedList />
       </main>
-      <AppAside images={rightImages} />
+      <AppAside images={rightImages} label="Right aside" />
     </div>
   );
 };

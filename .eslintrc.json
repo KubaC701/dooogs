@@ -1,0 +1,13 @@
+{
+  "extends": ["react-app", "react-app/jest"],
+  "rules": {
+    "react/jsx-key": "error",
+    "arrow-body-style": ["error", "as-needed"],
+    "sort-imports": [
+      "error",
+      {
+        "allowSeparatedGroups": true
+      }
+    ]
+  }
+}

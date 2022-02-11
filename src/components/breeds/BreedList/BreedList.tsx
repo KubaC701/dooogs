@@ -1,9 +1,8 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import BaseError from '../../base/BaseError/BaseError';
 import BreedListItem from './Item/Item';
 import BreedModal from '../BreedModal/BreedModal';
-
 import useBreeds from '../../../hooks/useBreeds';
 
 import styles from './BreedList.module.scss';
@@ -11,20 +10,20 @@ import styles from './BreedList.module.scss';
 const BreedList: React.FC = () => {
   const { breeds, error } = useBreeds();
   const [activeBreed, setActiveBreed] = useState('');
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleClickItem = useCallback((value: string) => {
+    setIsModalOpen(true);
+    setActiveBreed(value);
+  }, []);
+
+  const handleCloseModal = useCallback(() => {
+    setIsModalOpen(false);
+  }, []);
 
   if (error) {
     return <BaseError message={error} />;
   }
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false)
-  };
-
-  const handleClickItem = (value: string) => {
-    setIsModalOpen(true)
-    setActiveBreed(value);
-  };
 
   return (
     <>

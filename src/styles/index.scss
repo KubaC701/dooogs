@@ -7,11 +7,11 @@
 
 html {
   box-sizing: border-box;
-  font-family: 'Rubik', sans-serif;
+  font-family: Rubik, sans-serif;
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }

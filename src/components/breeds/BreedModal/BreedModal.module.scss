@@ -1,5 +1,5 @@
-@import '../../../styles/mixins.scss';
-@import '../../../styles/variables.scss';
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
 
 .modal {
   max-width: 550px;
@@ -11,7 +11,7 @@
   background-color: #fff;
   border-radius: 12px;
   padding: 3rem 1rem 1rem;
-  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 12px rgb(0 0 0 / 25%);
   height: calc(100vh - 4rem);
   display: flex;
   flex-direction: column;
@@ -25,12 +25,12 @@
 }
 
 .closeButton {
+  @include reset-button;
+
   position: absolute;
   top: 0;
   right: 0;
   padding: 1rem;
-
-  @include reset-button;
 }
 
 .image {
@@ -41,27 +41,12 @@
   animation: fade 1s ease-out;
 }
 
-.skeleton {
-  width: 100%;
-  aspect-ratio: 1;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .overlay {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   position: fixed;
   inset: 0;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgb(255 255 255 / 75%);
 
   &AfterOpen {
     opacity: 1;
@@ -69,5 +54,15 @@
 
   &BeforeClose {
     opacity: 0;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }

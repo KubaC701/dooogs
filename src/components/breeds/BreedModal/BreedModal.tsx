@@ -2,7 +2,6 @@ import Modal from 'react-modal';
 
 import BaseButton from '../../base/BaseButton/BaseButton';
 import BaseError from '../../base/BaseError/BaseError';
-
 import useBreedImage from '../../../hooks/useBreedImage';
 
 import styles from './BreedModal.module.scss';

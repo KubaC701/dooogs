@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import styles from './Item.module.scss';
 
 interface Props {
@@ -22,4 +24,4 @@ const BreedListItem: React.FC<Props> = ({ breed, onClick }) => {
   );
 };
 
-export default BreedListItem;
+export default memo(BreedListItem);

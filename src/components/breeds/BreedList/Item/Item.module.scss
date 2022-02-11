@@ -1,10 +1,11 @@
-@import '../../../../styles/mixins.scss';
+@import '../../../../styles/mixins';
 
 .button {
+  @include reset-button;
+
   width: 100%;
   text-align: left;
   padding: 1.5rem 1rem;
-  @include reset-button;
   border-bottom: 1px solid #000;
   font-weight: 600;
   text-transform: capitalize;
@@ -12,6 +13,6 @@
 
   &:focus,
   &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgb(0 0 0 / 10%);
   }
 }

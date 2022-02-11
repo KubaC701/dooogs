@@ -1,8 +1,9 @@
-@import '../../../styles/mixins.scss';
-@import '../../../styles/variables.scss';
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
 
 .button {
   @include reset-button;
+
   width: 100%;
   background-color: $primary-color;
   padding: 1rem;
@@ -14,6 +15,6 @@
 
   &:focus,
   &:hover {
-    background-color: $primary-color--darken;
+    background-color: $primary-color-darken;
   }
 }
