@@ -20,12 +20,12 @@ const BreedModal: React.FC<Props> = ({ isOpen, onClose, breed }) => {
   const isGenericBreed = typeof breed === 'string';
 
   const url = isGenericBreed ? breed : `${breed.name}/${breed.subBreed}`;
+  const title = isGenericBreed ? breed : `${breed.subBreed} ${breed.name}`;
 
   const { breedImage, error, refetch } = useBreedImage(url, {
     skip: !isOpen,
   });
 
-  const title = isGenericBreed ? breed : `${breed.name} ${breed.subBreed}`;
 
   return (
     <Modal

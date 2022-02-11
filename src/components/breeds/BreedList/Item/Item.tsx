@@ -16,13 +16,13 @@ const BreedListItem: React.FC<Props> = ({ breed, onClick, subBreeds }) => {
 
   const hasSubBreeds = subBreeds.length > 0;
 
-  const toggleCollapsion = () => {
+  const toggleOpened = () => {
     setIsOpened((prevIsOpened) => !prevIsOpened);
   };
 
   const handleClick = () => {
     if (hasSubBreeds) {
-      toggleCollapsion();
+      toggleOpened();
       return;
     }
 
