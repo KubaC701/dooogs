@@ -1,6 +1,7 @@
 @import '../../../../styles/mixins';
 
-.button {
+.button,
+.subButton {
   @include reset-button;
 
   width: 100%;
@@ -10,9 +11,27 @@
   font-weight: 600;
   text-transform: capitalize;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   &:focus,
   &:hover {
     background-color: rgb(0 0 0 / 10%);
+  }
+}
+
+.subList {
+  list-style: none;
+}
+
+.subButton {
+  padding-left: 2rem;
+}
+
+.arrow {
+  transition: transform 0.4s;
+  &Collapsed {
+    transform: rotate(180deg);
   }
 }

@@ -15,7 +15,7 @@ const useBreeds = () => {
     fetchData();
   }, [fetchData]);
 
-  return { breeds, isLoading, error, refetch: fetchData };
+  return { breeds: data?.message, isLoading, error, refetch: fetchData };
 };
 
 export default useBreeds;

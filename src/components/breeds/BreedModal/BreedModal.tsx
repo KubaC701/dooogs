@@ -4,20 +4,26 @@ import BaseButton from '../../base/BaseButton/BaseButton';
 import BaseError from '../../base/BaseError/BaseError';
 import useBreedImage from '../../../hooks/useBreedImage';
 
+import { Breed } from '../../../types';
+
 import styles from './BreedModal.module.scss';
 
 interface Props {
   isOpen: boolean;
   onClose: () => void;
-  breed: string;
+  breed: Breed;
 }
 
 Modal.setAppElement('#modal-root');
 
 const BreedModal: React.FC<Props> = ({ isOpen, onClose, breed }) => {
-  const { breedImage, error, refetch } = useBreedImage(breed, {
+  const url = breed.subBreed ? `${breed.name}/${breed.subBreed}` : breed.name;
+
+  const { breedImage, error, refetch } = useBreedImage(url, {
     skip: !isOpen,
   });
+
+  const title = breed.subBreed ? `${breed.name} ${breed.subBreed}` : breed.name;
 
   return (
     <Modal
@@ -39,7 +45,7 @@ const BreedModal: React.FC<Props> = ({ isOpen, onClose, breed }) => {
         <img src="/icons/close.svg" alt="Close" />
       </button>
       <h1 id="heading" className={styles.heading}>
-        {breed}
+        {title}
       </h1>
       {error ? (
         <BaseError message={error} />
@@ -48,7 +54,7 @@ const BreedModal: React.FC<Props> = ({ isOpen, onClose, breed }) => {
           <img
             className={styles.image}
             src={breedImage}
-            alt={breed}
+            alt={title}
             key={breedImage}
           />
         )
