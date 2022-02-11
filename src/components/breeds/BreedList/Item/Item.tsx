@@ -1,4 +1,6 @@
 import { memo, useState } from 'react';
+import { Collapse } from 'react-collapse';
+
 import { Breed } from '../../../../types';
 
 import styles from './Item.module.scss';
@@ -10,14 +12,16 @@ interface Props {
 }
 
 const BreedListItem: React.FC<Props> = ({ breed, onClick, subBreeds }) => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isOpened, setIsOpened] = useState(false);
+
+  const hasSubBreeds = subBreeds.length > 0;
 
   const toggleCollapsion = () => {
-    setIsCollapsed((prevIsCollapsed) => !prevIsCollapsed);
+    setIsOpened((prevIsOpened) => !prevIsOpened);
   };
 
   const handleClick = () => {
-    if (subBreeds.length > 0) {
+    if (hasSubBreeds) {
       toggleCollapsion();
       return;
     }
@@ -26,7 +30,7 @@ const BreedListItem: React.FC<Props> = ({ breed, onClick, subBreeds }) => {
   };
 
   const handleSubBreedClick = (subBreed: string) => () => {
-    onClick({name: breed, subBreed});
+    onClick({ name: breed, subBreed });
   };
 
   return (
@@ -34,17 +38,18 @@ const BreedListItem: React.FC<Props> = ({ breed, onClick, subBreeds }) => {
       <li>
         <button onClick={handleClick} className={styles.button}>
           {breed}
-          {subBreeds.length > 0 && (
+          {hasSubBreeds && (
             <img
               src="/icons/arrow.svg"
               alt=""
               className={`${styles.arrow} ${
-                isCollapsed && styles.arrowCollapsed
+                isOpened && styles.arrowCollapsed
               }`}
             />
           )}
         </button>
-        {isCollapsed && (
+
+        <Collapse isOpened={isOpened}>
           <ul className={styles.subList}>
             {subBreeds.map((subBreed) => (
               <li key={subBreed}>
@@ -57,7 +62,7 @@ const BreedListItem: React.FC<Props> = ({ breed, onClick, subBreeds }) => {
               </li>
             ))}
           </ul>
-        )}
+        </Collapse>
       </li>
     </>
   );
