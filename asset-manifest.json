@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dooogs/static/css/main.1d792d70.css",
+    "main.js": "/dooogs/static/js/main.24c969c7.js",
+    "index.html": "/dooogs/index.html",
+    "main.1d792d70.css.map": "/dooogs/static/css/main.1d792d70.css.map",
+    "main.24c969c7.js.map": "/dooogs/static/js/main.24c969c7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1d792d70.css",
+    "static/js/main.24c969c7.js"
+  ]
+}
