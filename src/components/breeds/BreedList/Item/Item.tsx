@@ -42,9 +42,7 @@ const BreedListItem: React.FC<Props> = ({ breed, onClick, subBreeds }) => {
             <img
               src="/icons/arrow.svg"
               alt=""
-              className={`${styles.arrow} ${
-                isOpened && styles.arrowCollapsed
-              }`}
+              className={`${styles.arrow} ${isOpened && styles.arrowCollapsed}`}
             />
           )}
         </button>
@@ -56,6 +54,7 @@ const BreedListItem: React.FC<Props> = ({ breed, onClick, subBreeds }) => {
                 <button
                   onClick={handleSubBreedClick(subBreed)}
                   className={`${styles.button} ${styles.subButton}`}
+                  tabIndex={isOpened ? 0 : -1}
                 >
                   {subBreed}
                 </button>

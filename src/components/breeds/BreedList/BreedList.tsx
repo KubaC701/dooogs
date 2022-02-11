@@ -31,13 +31,13 @@ const BreedList: React.FC = () => {
     <>
       <ul className={styles.list}>
         {breeds?.map(([breed, subBreeds]) => (
-            <BreedListItem
-              key={breed}
-              breed={breed}
-              onClick={handleClickItem}
-              subBreeds={subBreeds}
-            />
-          ))}
+          <BreedListItem
+            key={breed}
+            breed={breed}
+            onClick={handleClickItem}
+            subBreeds={subBreeds}
+          />
+        ))}
       </ul>
       {/* to render only one portal at once the modal is here, not in every single item */}
       {activeBreed && (

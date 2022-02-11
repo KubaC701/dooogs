@@ -26,7 +26,6 @@ const BreedModal: React.FC<Props> = ({ isOpen, onClose, breed }) => {
     skip: !isOpen,
   });
 
-
   return (
     <Modal
       aria={{
